@@ -1,0 +1,19 @@
+{% load staticfiles %}
+<html>
+<head>
+	<title>Sample</title>
+	<link rel="stylesheet"  href="{% static 'style.css'%}"/>
+</head>
+<body background="{% static 'img/image.jpg' %}">
+<h1>User Registration Form</h1>
+
+
+<form method="POST" action="" class="col-md-5">  
+	{%csrf_token%}
+	{{frm.as_p}}
+	<button type="submit">Submit</button>
+
+</form>
+<button><center><a href="/login">LOGIN</a></center></button>
+</body>
+</html>
